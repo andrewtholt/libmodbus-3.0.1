@@ -1,0 +1,28 @@
+#!/bin/sh
+
+OBJS=test.o modbus_scan.o
+BINS=test.exe modbus_scan.exe
+CFLAGS=-g -DCYGWIN
+
+INC = /usr/local/include/modbus
+LIBS=-L/usr/local/lib -lmodbus 
+SQL=-L/opt/local/lib -lsqlite3
+
+all:	test modbus_scan
+
+modbus_scan:	modbus_scan.o
+	$(CC) $(CFLAGS) -o modbus_scan modbus_scan.o $(LIBS) 
+
+modbus_scan.o:	modbus_scan.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o modbus_scan.o modbus_scan.c
+
+test:	test.o
+	$(CC) $(CFLAGS) -o test test.o $(LIBS) $(SQL)
+
+test.o:	test.c
+	$(CC) -I$(INC) -c -o test.o test.c
+
+clean:
+	rm -f $(OBJS) $(BINS) cscope.out
+install:
+	cp $(BINS) /usr/local/bin

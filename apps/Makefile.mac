@@ -1,0 +1,63 @@
+#!/bin/sh
+
+OBJS=test.o modbus_scan.o modbus.o simpleClient.o
+BINS=test modbus_scan modbus simpleClient
+CFLAGS=-g -arch i386 -DMACOS
+
+INC = /usr/local/include/modbus
+
+LIBS=-L/usr/local/lib -lmodbus -liniparser
+
+SQL=-L/opt/local/lib -lsqlite3
+
+all:	modbus_scan modbus localServer # test
+
+helper.o:	helper.c
+	$(CC) $(CFLAGS)  -fPIC -c helper.c -o helper.o
+
+libhelper.dylib:	helper.o
+	$(CC) $(CFLAGS) -dynamiclib helper.o -o libhelper.dylib
+
+tst:	tst.o libhelper.dylib
+	$(CC) $(CFLAGS) -g tst.o -o tst -L. -lhelper
+
+tst.o:	tst.c
+	$(CC) $(CFLAGS) -g -c tst.c -o tst.o
+
+modbus:	modbus.o
+	$(CC) $(CFLAGS) -o modbus modbus.o $(LIBS) 
+
+modbus.o:	modbus.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o modbus.o modbus.c
+
+modbus.o:	modbus.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o modbus.o modbus.c
+
+modbus_scan:	modbus_scan.o
+	$(CC) $(CFLAGS) -o modbus_scan modbus_scan.o $(LIBS) 
+
+simpleClient.o:	simpleClient.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o simpleClient.o simpleClient.c
+
+simpleClient:	simpleClient.o
+	$(CC) $(CFLAGS) -I$(INC) -c -o simpleClient simpleClient.o $(LIBS)
+
+test:	test.o
+	$(CC) $(CFLAGS) -o test test.o $(LIBS) $(SQL)
+
+test.o:	test.c
+	$(CC) -I$(INC) -c -o test.o test.c
+
+localServer:    localServer.o
+	$(CC) $(CFLAGS) -o localServer localServer.o $(LIBS) 
+
+localServer.o:  localServer.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o localServer.o localServer.c
+
+install:
+	cp modbus_scan /tmp/
+	strip /tmp/modbus_scan
+	mv modbus_scan /usr/local/bin
+
+clean:
+	rm -f $(OBJS) $(BINS) cscope.out *.o *.EXE

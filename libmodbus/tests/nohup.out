@@ -1,0 +1,2880 @@
+Opening db /var/data/RS.db
+res=/dev/tty.usbserial-A600drA9:9600:E:2:8:60;
+tmp=60;
+nap_time=60
+1
+2
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0068
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006a
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006a
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0065
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0068
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0060
+08|:0000:0060:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0061
+08|:0000:0061:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006e
+08|:0000:006e:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0073
+08|:0000:0073:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0077
+08|:0000:0077:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:0062:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006e
+08|:0000:006e:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0065
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0068
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0067
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0066:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:005f
+08|:0000:005f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0000
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0067
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:007a
+08|:0000:007a:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:006a:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:0072:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:0063:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0070
+08|:0000:0070:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0064
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0068
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006e:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:0062:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0056
+08|:0000:0056:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0066:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0067
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0063
+08|:0000:0063:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0066:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:005c
+08|:0000:005c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0074
+08|:0000:0074:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0072
+08|:0000:0072:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006a
+08|:0000:006a:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0068
+08|:0000:0068:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0066:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006b
+08|:0000:006b:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:0062:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0065
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006d
+08|:0000:006d:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0072
+08|:0000:0072:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0072
+08|:0000:0072:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:0062:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006a
+08|:0000:006a:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0067
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0070
+08|:0000:0070:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0065
+08|:0000:0065:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006f
+08|:0000:006f:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0075
+08|:0000:0075:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0062
+08|:0000:006e:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0070
+08|:0000:0070:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0063
+08|:0000:0063:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:006c
+08|:0000:006c:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0072
+08|:0000:0072:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0066
+08|:0000:0066:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0069
+08|:0000:0069:0002:0003:0000:0000:0000:0000
+16|:0000:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
+RTU=1
+retries=3
+modbus_read_registers: 50
+Register count: 50
+  |   00   01   02   03   04   05   06   07 
+==+=========================================
+00|:0000:0000:0000:0000:0000:0000:0000:0067
+08|:0000:0067:0002:0003:0000:0000:0000:0000
+16|:00ERROR Can't open the device /dev/tty.usbserial-A600drA9 (No such file or directory)
+Connection failed: No such file or directory
+00:0000:0000:0000:ffff:8696:8696:8696
+24|:00f7:00ff:00f0:0000:0000:0000:0000:0000
+32|:0000:0000:000d:0000:001f:0088:0000:0000
+40|:0000:0000:0000:0000:0000:0000:0022:0000
+48|:0000:0000:0001
+
+L1    0 Watts
+L2    0 Watts
+L3    0 Watts
+=============================
+insert into data (RTU,phaseA,phaseB,phaseC) values( 1,0,0,0);
+RTU=2
+retries=3
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=2
+modbus_read_registers: -1
+FAILED RTU 2)
+RTU=2
+retries=1
+modbus_read_registers: -1
+FAILED RTU 2)
+Sleeping for 60
+>>60
