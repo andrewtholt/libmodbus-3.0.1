@@ -1,3 +1,8 @@
+\ 
+\ Simple test and mntoring program for simpleClient
+\ 
+\ Accesses shared memory
+
 load mydump.fth
 
 -1 value input_shmid
