@@ -122,13 +122,14 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
+    // Add check that serial port exists and is accesable.
+    //
 
     localInputRegisters= (uint16_t *)malloc( LOCAL_INPUT_REGISTERS );
     localHoldingRegisters = (uint16_t *)malloc( LOCAL_HOLDING_REGISTERS);
 
     memset( localInputRegisters,0x00, LOCAL_INPUT_REGISTERS);
     memset( localHoldingRegisters,0x00, LOCAL_HOLDING_REGISTERS);
-
 
     if(verbose) {
         printf("\n\t\tSettings\n");
@@ -168,8 +169,6 @@ int main(int argc, char *argv[]) {
     ctx_serial = modbus_new_rtu(tty, baud_rate, parity, length, stop_bits);
 
     while ( !exitFlag ) {
-        //	ctx_tcp = modbus_new_tcp("127.0.0.1", 1502);
-
         header_length = modbus_get_header_length(ctx_tcp);
 
         //        printf("Header length=%d\n", header_length);
@@ -198,7 +197,6 @@ int main(int argc, char *argv[]) {
             fprintf(stderr,"FATAL ERROR: %s\n", modbus_strerror(errno));
             exit(-1);
         }
-
 
         while ( 1 ) {
             do {
@@ -239,7 +237,8 @@ int main(int argc, char *argv[]) {
                 uint16_t data;
                 int cnt=0;
 
-                // Need to add address range checks, and return an error for an invalid function.
+                // Need to add address range checks, and return an error 
+                // for an invalid function.
 
                 switch (query[header_length]) {
                     case 0x03:  // read holding registers
@@ -303,7 +302,6 @@ int main(int argc, char *argv[]) {
                         fprintf(stderr, "Connection failed: %s\n",modbus_strerror(errno));
                     }
 
-
                     rc=modbus_send_raw_request( ctx_serial,raw_query,6);
 
                     if( -1 == rc ) {
@@ -314,10 +312,14 @@ int main(int argc, char *argv[]) {
 
                     /*
                      * This next loop swaps bytes in words.
-                     * If this is built and running on a little endian machine (most machines are these days)
-                     * Then this needs to be done.  If on a big endian machine (M68000 family) just comment this out.
+                     * If this is built and running on a little endian 
+                     * machine (most machines are these days)
+                     * Then this needs to be done.  
+                     * If on a big endian machine (M68000 family) just 
+                     * comment this out.
                      *                     
-                     * It might be worth having a command line switch.
+                     * It might be worth having a command line switch,
+                     * detect endianness.
                      *                     
                      */
 
