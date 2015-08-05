@@ -24,7 +24,7 @@ modbus_scan.o:	modbus_scan.c
 simpleClient:	simpleClient.c
 	$(CC) $(CFLAGS) -I$(INC) -o simpleClient simpleClient.c $(LIBS) 
 
-simpleServer:	simpleServer.c
+simpleServer:	simpleServer.o
 	$(CC) $(CFLAGS) -o simpleServer simpleServer.o $(LIBS) 
 
 simpleServer.o:	simpleServer.c
