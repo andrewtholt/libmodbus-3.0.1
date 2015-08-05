@@ -3,7 +3,7 @@
 \ 
 \ Accesses shared memory
 
-load mydump.fth
+\ load mydump.fth
 
 -1 value input_shmid
 -1 value input_semid
@@ -34,7 +34,7 @@ hex
     input_ptr . cr
 
     input_semid getsem abort" getsem"
-    input_ptr 20 mdump cr
+    input_ptr 20 dump cr
     input_semid relsem abort" relsem"
 ;
 
@@ -43,7 +43,7 @@ hex
     holding_ptr . cr
 
     holding_semid getsem abort" getsem"
-    holding_ptr 20 mdump cr
+    holding_ptr 20 dump cr
     holding_semid relsem abort" relsem"
 ;
 
@@ -72,6 +72,12 @@ hex
     input_semid relsem abort" relsem"
 ;
 
+: help
+    cr
+    ." dump-input" cr
+    ." dump-holding" cr
+    ." dump-sem" cr
+;
 
 s" shm-ok> " 0 set-prompt
 
