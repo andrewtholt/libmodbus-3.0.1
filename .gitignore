@@ -23,6 +23,7 @@ unit-test-server
 unit-test.h
 version
 
+libmodbus/configure
 libmodbus/Makefile
 libmodbus/config.h
 libmodbus/doc/Makefile
