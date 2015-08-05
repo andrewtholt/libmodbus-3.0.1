@@ -1,6 +1,7 @@
 
 
 *.o
+*.so
 *.lo
 *.la
 *.log
@@ -30,3 +31,10 @@ libmodbus/src/Makefile
 libmodbus/src/modbus-version.h
 libmodbus/stamp-h1
 libmodbus/tests/Makefile
+cscope.out
+localServer
+modbus_collect
+modbus_scan
+simpleClient
+simpleServer
+
