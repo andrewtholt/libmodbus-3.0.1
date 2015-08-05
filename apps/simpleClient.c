@@ -5,10 +5,7 @@
 #include <errno.h>
 #include <modbus.h>
 
-
-int 
-main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     extern int errno;
 	modbus_t       *ctx;
 	unsigned int    registers;
