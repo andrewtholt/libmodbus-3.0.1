@@ -573,6 +573,8 @@ int main(int argc, char *argv[]) {
     int localHoldingRegistersSize;
     
     char ch;    // for getopt
+    int opt;
+
     char scratch[255];
     char *ptr;
     char *iniFile=(char *)NULL;
@@ -612,8 +614,8 @@ int main(int argc, char *argv[]) {
     
     //    ip=strsave("127.0.0.1");    // default is localhost
     
-    while ((ch = getopt(argc,argv,"c:h?i:p:qv")) != -1) {
-        switch (ch) {
+    while ((opt = getopt(argc,argv,"c:h?i:p:qv")) != -1) {
+        switch (opt) {
             case 'c': // config file
                 if ((char *)NULL != iniFile) {
                     free( iniFile );
@@ -641,6 +643,8 @@ int main(int argc, char *argv[]) {
                 verbose=1;
                 break;
             default:
+                printf("What ?\n");
+                exit(-10);
                 break;
         }
     }

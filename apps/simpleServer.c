@@ -17,7 +17,7 @@
 
 const uint16_t UT_REGISTERS_NB_SPECIAL = 0x2;
 
-char           *strsave(char *s) {
+char *strsave(char *s) {
     char           *p;
 
     if ((p = (char *) malloc(strlen(s) + 1)) != NULL) {

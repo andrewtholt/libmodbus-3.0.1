@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
     
 //	ctx = modbus_new_tcp("192.168.0.143", 1502);
 //	ctx = modbus_new_tcp("127.0.0.1", 1502);
-	ctx = modbus_new_tcp("10.0.0.101", 502);
+//	ctx = modbus_new_tcp("10.0.0.101", 502);
+	ctx = modbus_new_tcp("192.168.100.72", 502);
 
 	if (ctx == NULL) {
 		fprintf(stderr, "modbus_new_tcp failed.\n");
