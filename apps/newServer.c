@@ -475,7 +475,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	printf("IO Address=0x%04x\n",io_address);
-	printf("Seq Number=0x%04x\in", query[1]);
+	printf("Seq Number=0x%04x\n", query[1]);
       }   
       
       if( 0xff == RTU ) {
@@ -515,7 +515,8 @@ int main(int argc, char *argv[]) {
 	  default:
 	    break;
 	}
-      } else if(tty != (char *)NULL)  {
+      } else {
+      if(serialRTUenabled)  {
 	if( 0x06 == query[header_length] ) {
 	  if(verbose) {
 	    printf("Write single register.\n");
@@ -558,7 +559,6 @@ int main(int argc, char *argv[]) {
 	  }
 	  
 	  modbus_receive_confirmation(ctx_serial, raw_reply);
-	  
 	  /*
 	   * This next loop swaps bytes in words.
 	   * If this is built and running on a little endian 
@@ -626,13 +626,14 @@ int main(int argc, char *argv[]) {
 	  
 	}
       }
+      }
       
       //    printf("Reply with an invalid TID or slave\n");
       //    rc=modbus_send_raw_request(ctx_tcp, raw_reply, 10 * sizeof(uint8_t));
       //    rc=modbus_reply_exception(ctx_tcp, query, 1);
       
       
-      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+//      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
     }
     
     if( verbose ) {
