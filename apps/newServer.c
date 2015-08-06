@@ -500,6 +500,7 @@ int main(int argc, char *argv[]) {
 	    printf("Data=%02d\n",data);
 	    
 	    local_mb_mapping->tab_registers[io_address]=data;
+	    break;
 	  case 0x10: // Write multiple registers
 	    //                        len=query[7];
 	    swab(&query[10],&len,2);
@@ -511,6 +512,7 @@ int main(int argc, char *argv[]) {
 	      
 	      local_mb_mapping->tab_registers[ io_address + cnt++ ] = data;
 	    }
+	    break;
 	    
 	  default:
 	    break;
