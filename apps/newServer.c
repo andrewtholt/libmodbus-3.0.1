@@ -475,6 +475,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	printf("IO Address=0x%04x\n",io_address);
+	printf("Seq Number=0x%04x\in", query[1]);
       }   
       
       if( 0xff == RTU ) {
