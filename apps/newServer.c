@@ -343,7 +343,7 @@ int main(int argc, char *argv[]) {
       perror("Holding Reg shmget");
       exit(3);
     }
-    local_mb_mapping->tab_register = (uint16_t *)shmat(holdingShmId,NULL,0);
+    local_mb_mapping->tab_registers = (uint16_t *)shmat(holdingShmId,NULL,0);
     if (local_mb_mapping->tab_registers < 0) {
       perror("Holding Reg shmat");
       exit(4);
