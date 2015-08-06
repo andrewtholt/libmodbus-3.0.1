@@ -630,7 +630,7 @@ int main(int argc, char *argv[]) {
 	    // Then overwrite the outbound data.
 	    //
 	    len=raw_reply[2] + 3;
-	    rc=modbus_send_raw_request(ctx_tcp, raw_reply, 10 * sizeof(uint8_t));
+            rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
 	    //    printf("Len=%d\n",len);
 	    
 	    //    memcpy(  mb_mapping->tab_input_registers, &raw_reply[3], raw_reply[2]);
