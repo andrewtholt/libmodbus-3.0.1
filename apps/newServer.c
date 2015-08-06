@@ -500,6 +500,7 @@ int main(int argc, char *argv[]) {
 	    printf("Data=%02d\n",data);
 	    
 	    local_mb_mapping->tab_registers[io_address]=data;
+	    rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
 	    break;
 	  case 0x10: // Write multiple registers
 	    //                        len=query[7];
@@ -518,116 +519,116 @@ int main(int argc, char *argv[]) {
 	    break;
 	}
       } else {
-      if(serialRTUenabled)  {
-	if( 0x06 == query[header_length] ) {
-	  if(verbose) {
-	    printf("Write single register.\n");
-	    printf("RTU is %d\n",RTU);
-	  }
-	  modbus_set_slave( ctx_serial,RTU);
-	  memcpy(raw_query,&query[header_length-1], 6);
-	  rc=modbus_send_raw_request( ctx_serial,raw_query,6);
-	  modbus_receive_confirmation(ctx_serial, raw_reply);
-	  rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-	  
-	} else if( (0x03 == query[header_length]) || (0x04 == query[header_length])) {
-	  int len;
-	  
-	  if(verbose) {
+	if(serialRTUenabled)  {
+	  if( 0x06 == query[header_length] ) {
+	    if(verbose) {
+	      printf("Write single register.\n");
+	      printf("RTU is %d\n",RTU);
+	    }
+	    modbus_set_slave( ctx_serial,RTU);
+	    memcpy(raw_query,&query[header_length-1], 6);
+	    rc=modbus_send_raw_request( ctx_serial,raw_query,6);
+	    modbus_receive_confirmation(ctx_serial, raw_reply);
+	    rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+	    
+	  } else if( (0x03 == query[header_length]) || (0x04 == query[header_length])) {
+	    int len;
+	    
+	    if(verbose) {
+	      switch (query[header_length]) {
+		case 0x03:
+		  printf("Read Holding Registers.\n");
+		  break;
+		case 0x04:
+		  printf("Read Input Registers.\n");
+		  break;
+		default:
+		  break;
+	      }
+	    }
+	    
+	    memcpy(raw_query,&query[header_length-1], 6);
+	    
+	    modbus_set_slave( ctx_serial, query[header_length-1]);
+	    
+	    if( -1 == modbus_connect( ctx_serial)) {
+	      fprintf(stderr, "Connection failed: %s\n",modbus_strerror(errno));
+	    }
+	    
+	    rc=modbus_send_raw_request( ctx_serial,raw_query,6);
+	    
+	    if( -1 == rc ) {
+	      printf("modbus_send_raw_request: %s\n",modbus_strerror(errno));
+	    }
+	    
+	    modbus_receive_confirmation(ctx_serial, raw_reply);
+	    /*
+	     * This next loop swaps bytes in words.
+	     * If this is built and running on a little endian 
+	     * machine (most machines are these days)
+	     * Then this needs to be done.  
+	     * If on a big endian machine (M68000 family) just 
+	     * comment this out.
+	     *                     
+	     * It might be worth having a command line switch,
+	     * detect endianness.
+	     *                     
+	     */
+	    
 	    switch (query[header_length]) {
 	      case 0x03:
 		printf("Read Holding Registers.\n");
+		tmp=(unsigned char *)mb_mapping->tab_registers;
+		// rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
 		break;
 	      case 0x04:
 		printf("Read Input Registers.\n");
+		tmp=(unsigned char *)mb_mapping->tab_input_registers;
 		break;
 	      default:
 		break;
 	    }
-	  }
-	  
-	  memcpy(raw_query,&query[header_length-1], 6);
-	  
-	  modbus_set_slave( ctx_serial, query[header_length-1]);
-	  
-	  if( -1 == modbus_connect( ctx_serial)) {
-	    fprintf(stderr, "Connection failed: %s\n",modbus_strerror(errno));
-	  }
-	  
-	  rc=modbus_send_raw_request( ctx_serial,raw_query,6);
-	  
-	  if( -1 == rc ) {
-	    printf("modbus_send_raw_request: %s\n",modbus_strerror(errno));
-	  }
-	  
-	  modbus_receive_confirmation(ctx_serial, raw_reply);
-	  /*
-	   * This next loop swaps bytes in words.
-	   * If this is built and running on a little endian 
-	   * machine (most machines are these days)
-	   * Then this needs to be done.  
-	   * If on a big endian machine (M68000 family) just 
-	   * comment this out.
-	   *                     
-	   * It might be worth having a command line switch,
-	   * detect endianness.
-	   *                     
-	   */
-	  
-	  switch (query[header_length]) {
-	    case 0x03:
-	      printf("Read Holding Registers.\n");
-	      tmp=(unsigned char *)mb_mapping->tab_registers;
-	      // rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
-	      break;
-	    case 0x04:
-	      printf("Read Input Registers.\n");
-	      tmp=(unsigned char *)mb_mapping->tab_input_registers;
-	      break;
-	    default:
-	      break;
-	  }
-	  
-	  tmp_address = (io_address*2);
-	  
-	  for(i=0;i<raw_reply[2];i=i+2 ) {
-	    /*
-	     *     printf("i=%d\n",i);
-	     *     printf("\t%d:i=%d data=%02x\n",i,i+4,raw_reply[i+4]);
-	     *     printf("\t%d:i=%d data=%02x\n",i+1,i+3,raw_reply[i+3]);
-	     */
-	    tmp[tmp_address+i]=raw_reply[i+4];
-	    tmp[tmp_address+i+1]=raw_reply[i+3];
-	  }
-	  
-	  for(i=0;i<10;i++) {
-	    if (verbose) {
-	      printf("!%02x!",raw_reply[i]);
+	    
+	    tmp_address = (io_address*2);
+	    
+	    for(i=0;i<raw_reply[2];i=i+2 ) {
+	      /*
+	       *     printf("i=%d\n",i);
+	       *     printf("\t%d:i=%d data=%02x\n",i,i+4,raw_reply[i+4]);
+	       *     printf("\t%d:i=%d data=%02x\n",i+1,i+3,raw_reply[i+3]);
+	       */
+	      tmp[tmp_address+i]=raw_reply[i+4];
+	      tmp[tmp_address+i+1]=raw_reply[i+3];
 	    }
-	  }
-	  printf("\n");
-	  
-	  for(i=0;i<10;i++) {
-	    if (verbose) {
-	      printf("+%02x+",tmp[i]);
+	    
+	    for(i=0;i<10;i++) {
+	      if (verbose) {
+		printf("!%02x!",raw_reply[i]);
+	      }
 	    }
+	    printf("\n");
+	    
+	    for(i=0;i<10;i++) {
+	      if (verbose) {
+		printf("+%02x+",tmp[i]);
+	      }
+	    }
+	    printf("\n");
+	    
+	    //
+	    // compute packet length by getting the data length 
+	    // and then add 2.
+	    // Then overwrite the outbound data.
+	    //
+	    len=raw_reply[2] + 3;
+	    //    printf("Len=%d\n",len);
+	    
+	    //    memcpy(  mb_mapping->tab_input_registers, &raw_reply[3], raw_reply[2]);
+	    
+	    //    MODBUS_SET_INT16_TO_INT8(query, header_length + 3, UT_REGISTERS_NB_SPECIAL - 1);
+	    
 	  }
-	  printf("\n");
-	  
-	  //
-	  // compute packet length by getting the data length 
-	  // and then add 2.
-	  // Then overwrite the outbound data.
-	  //
-	  len=raw_reply[2] + 3;
-	  //    printf("Len=%d\n",len);
-	  
-	  //    memcpy(  mb_mapping->tab_input_registers, &raw_reply[3], raw_reply[2]);
-	  
-	  //    MODBUS_SET_INT16_TO_INT8(query, header_length + 3, UT_REGISTERS_NB_SPECIAL - 1);
-	  
 	}
-      }
       }
       
       //    printf("Reply with an invalid TID or slave\n");
@@ -635,7 +636,7 @@ int main(int argc, char *argv[]) {
       //    rc=modbus_reply_exception(ctx_tcp, query, 1);
       
       
-//      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+      //      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
     }
     
     if( verbose ) {
