@@ -284,51 +284,6 @@ int main(int argc, char *argv[]) {
   
   serialRTUenabled = iniparser_getboolean(ini,"modbus:RTU",0);
   
-  // 
-  // Setup the memory for the shared input registers.
-  // 
-  if ( useSharedInput ) {
-    if (verbose)
-      printf("Share the Input regsisters R/W\n");
-    
-    inputShmKey = iniparser_getint(ini, "system:input_reg_key",110);
-    inputSemKey = iniparser_getint(ini, "system:input_reg_sema",111);
-    
-    inputShmId = shmget(inputShmKey, localInputRegistersSize, IPC_CREAT | 0600 );  // change to 0400
-    
-    if (inputShmId < 0) {
-      perror("Input Reg shmget");
-      exit(3);
-    }
-    localInputRegisters = (uint16_t *)shmat(inputShmId,NULL,0);
-    
-  } else {
-    localInputRegisters= (uint16_t *)malloc( LOCAL_INPUT_REGISTERS );
-  }
-  // 
-  // Setup the memory for the holding registers.
-  //
-  if ( useSharedHolding ) {
-    if (verbose)
-      printf("Share the Holding regsisters R/W\n");
-    
-    holdingShmKey = iniparser_getint(ini, "system:holding_reg_key",110);
-    holdingSemKey = iniparser_getint(ini, "system:holding_reg_sema",111);
-    
-    holdingShmId = shmget(holdingShmKey, localHoldingRegistersSize, IPC_CREAT | 0600 );  // change to 0400
-    
-    if (holdingShmId < 0) {
-      perror("Holding Reg shmget");
-      exit(3);
-    }
-    localHoldingRegisters = (uint16_t *)shmat(holdingShmId,NULL,0);
-    
-  } else {
-    localHoldingRegisters = (uint16_t *)malloc( LOCAL_HOLDING_REGISTERS);
-  }
-  
-  memset( localInputRegisters,0x00, LOCAL_INPUT_REGISTERS);
-  memset( localHoldingRegisters,0x00, LOCAL_HOLDING_REGISTERS);
   
   if(verbose) {
     printf("\n\t\tSettings\n");
@@ -370,6 +325,88 @@ int main(int argc, char *argv[]) {
     LOCAL_HOLDING_REGISTERS,   // Holding registers
     LOCAL_INPUT_REGISTERS);  // Input registers
   
+  // 
+  // Setup the memory for the holding registers.
+  //
+  if ( useSharedHolding ) {
+    if (verbose)
+      printf("Share the Holding regsisters R/W\n");
+    
+    localHoldingRegisters = local_mb_mapping->tab_registers;
+    
+    holdingShmKey = iniparser_getint(ini, "system:holding_reg_key",110);
+    holdingSemKey = iniparser_getint(ini, "system:holding_reg_sema",111);
+    
+    holdingShmId = shmget(holdingShmKey, localHoldingRegistersSize, IPC_CREAT | 0600 );  // change to 0400
+    
+    if (holdingShmId < 0) {
+      perror("Holding Reg shmget");
+      exit(3);
+    }
+    local_mb_mapping->tab_register = (uint16_t *)shmat(holdingShmId,NULL,0);
+    if (local_mb_mapping->tab_registers < 0) {
+      perror("Holding Reg shmat");
+      exit(4);
+    }
+    
+    /* 
+     * Create the seamphore 
+     */
+    holdingSemId = semget( holdingSemKey, 1, IPC_CREAT | 0600 );
+    if (-1 == holdingSemId) {
+      perror("Input reg semaphore");
+      exit(2);
+    }
+    /*
+     *         Shared memory created, semaphore created (default is locked)
+     *         release the seamphore !
+     */
+    rc = semctl(holdingSemId, 0, SETVAL, 1);
+    
+  }
+  // 
+  // Setup the memory for the shared input registers.
+  // 
+  if ( useSharedInput ) {
+    if (verbose)
+      printf("Share the Input regsisters R/W\n");
+    
+    localInputRegisters = local_mb_mapping->tab_input_registers; // Save the current pointer
+    
+    inputShmKey = iniparser_getint(ini, "system:input_reg_key",110);
+    inputSemKey = iniparser_getint(ini, "system:input_reg_sema",111);
+    
+    inputShmId = shmget(inputShmKey, localInputRegistersSize, IPC_CREAT | 0600 );  // change to 0400
+    
+    if (inputShmId < 0) {
+      perror("Input Reg shmget");
+      exit(3);
+    }
+    local_mb_mapping->tab_input_registers = (uint16_t *)shmat(inputShmId,NULL,0);
+    
+    if ( local_mb_mapping->tab_input_registers < 0) {
+      perror("Input Reg shmat");
+      exit(1);
+    }
+    
+    /* 
+     * create the seamphore 
+     */
+    inputSemId = semget( inputSemKey, 1, IPC_CREAT | 0600 );
+    if (-1 == inputSemId) {
+      perror("Input reg semaphore");
+      exit(2);
+    }
+    /*
+     *         Shared memory created, semaphore created (default is locked)
+     *         release the seamphore !
+     */
+    rc = semctl(inputSemId, 0, SETVAL, 1);
+    
+  }
+  
+  memset( localInputRegisters,0x00, LOCAL_INPUT_REGISTERS);
+  memset( localHoldingRegisters,0x00, LOCAL_HOLDING_REGISTERS);
   
   local_mb_mapping->tab_input_registers[0]=0xaa55;
   
