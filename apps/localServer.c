@@ -946,6 +946,7 @@ int main(int argc, char *argv[]) {
             
             if (-1 == rc) {
                 if( verbose ) {
+                    fprintf(stderr,"FATAL ERROR: %s\n", modbus_strerror(errno));
                     printf("Client disconnected.\n");
                 }
                 break;

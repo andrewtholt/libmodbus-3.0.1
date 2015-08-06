@@ -1,7 +1,7 @@
 #!/bin/sh
 
 OBJS=modbus_collect.o modbus_scan.o
-BINS=modbus_collect modbus_scan simpleServer localServer simpleClient libhelper.so
+BINS=newServer modbus_collect modbus_scan simpleServer localServer simpleClient libhelper.so
 CFLAGS=-g
 
 INC = /usr/local/include/modbus
@@ -44,4 +44,14 @@ localServer:    localServer.o
 
 localServer.o:  localServer.c
 	$(CC) $(CFLAGS) -I$(INC) -c -o localServer.o localServer.c
+
+newServer:    newServer.o
+	$(CC) -I$(INC) $(CFLAGS) -o newServer newServer.o $(LIBS) 
+
+newServer.o:  newServer.c
+	$(CC) $(CFLAGS) -I$(INC) -c -o newServer.o newServer.c
+
+
+
+
 

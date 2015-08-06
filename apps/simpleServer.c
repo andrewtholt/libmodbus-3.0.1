@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
     char *tty=(char *)NULL;
     char *ip=(char *)NULL;
     int port=1502;
-    int verbose=0;
+    int verbose=1;
     int io_address=0;
     int tmp_address=0;
 
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
     int i;
     unsigned char *tmp;
-    char ch;    // for getopt
+    int ch;    // for getopt
 
 
     tty=strsave("/dev/tty.usbserial-A600drA9");    // default for my mac
@@ -98,6 +98,7 @@ int main(int argc, char *argv[]) {
                     free(ip);
                 }
                 ip=strsave( optarg );
+                break;
             case 'p':
                 port=atoi( optarg );
                 break;
