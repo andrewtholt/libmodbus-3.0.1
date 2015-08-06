@@ -513,6 +513,7 @@ int main(int argc, char *argv[]) {
 	      
 	      local_mb_mapping->tab_registers[ io_address + cnt++ ] = data;
 	    }
+	    rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
 	    break;
 	    
 	  default:
