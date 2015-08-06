@@ -176,7 +176,7 @@ int main(int argc, char *argv[]) {
     "./newServer.ini"
   };
   
-  tty=strsave("/dev/tty.usbserial-A600drA9");    // default for my mac
+//  tty=strsave("/dev/tty.usbserial-A600drA9");    // default for my mac
   //  ip=strsave("127.0.0.1");    // default is localhost
   
   while ((ch = getopt(argc,argv,"b:c:h?i:p:P:t:v")) != -1) {
@@ -284,6 +284,12 @@ int main(int argc, char *argv[]) {
   
   serialRTUenabled = iniparser_getboolean(ini,"modbus:RTU",0);
   
+  if( serialRTUenabled ) {
+    tty = iniparser_getstring(ini,"tty","/dev/ttyUSB0");
+  } else {
+    tty = (char *)NULL;
+  }
+  
   
   if(verbose) {
     printf("\n\t\tSettings\n");
@@ -298,15 +304,17 @@ int main(int argc, char *argv[]) {
     printf("\nStarted.\n");
   }
   
-  if(access(tty,F_OK) == 0) {
-    printf("Serial port %s exists.....\n",tty);
-    // 
-    // Now test that it is readable, writable.
-    //
-  } else {
-    printf("Serial port %s does NOT exist\n",tty);
-    free( tty );
-    tty = (char *)NULL;
+  if (serialRTUenabled ) {
+    if(access(tty,F_OK) == 0) {
+      printf("Serial port %s exists.....\n",tty);
+      // 
+      // Now test that it is readable, writable.
+      //
+    } else {
+      printf("Serial port %s does NOT exist\n",tty);
+      free( tty );
+      tty = (char *)NULL;
+    }
   }
   
   query = malloc(MODBUS_TCP_MAX_ADU_LENGTH);
