@@ -285,7 +285,7 @@ int main(int argc, char *argv[]) {
   serialRTUenabled = iniparser_getboolean(ini,"modbus:RTU",0);
   
   if( serialRTUenabled ) {
-    tty = iniparser_getstring(ini,"tty","/dev/ttyUSB0");
+    tty = iniparser_getstring(ini,"modbus:tty","/dev/ttyUSB0");
   } else {
     tty = (char *)NULL;
   }
