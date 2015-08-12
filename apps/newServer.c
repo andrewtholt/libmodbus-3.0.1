@@ -80,7 +80,7 @@ int createIni(char *name ) {
   fprintf(fd,"# debug_03 = yes ; Debug 0x03 Read Holding Registers\n");
   fprintf(fd,"# debug_04 = yes ; Debug 0x04 Read Input Registers\n");
   fprintf(fd,"# debug_06 = yes ; Debug 0x06 Write Single Register\n");
-  fprintf(fd,"# \n");
+ fprintf(fd,"# \n");
   
   fprintf(fd,"\n");
   fprintf(fd,"\n");
@@ -529,7 +529,28 @@ int main(int argc, char *argv[]) {
 	}
       } else {
 	if(serialRTUenabled)  {
+	  
+	  switch( query[header_length] ) {
+	    case 0x06:
+	      printf("Write Single Register %d\n",RTU);
+	      modbus_set_slave( ctx_serial,RTU);
+	      memcpy(raw_query,&query[header_length-1], 6);
+	      rc=modbus_send_raw_request( ctx_serial,raw_query,6);
+	      modbus_receive_confirmation(ctx_serial, raw_reply);
+	      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+	    
+	      break;
+	    case 0x03:
+	    case 0x04:
+	      printf("Read Registers %d\n",RTU);
+	      break;
+	    case 0x10:
+	      printf("Write multiple registers %d\n",RTU);
+	      break;
+	  }
+	  
 	  if( 0x06 == query[header_length] ) {
+	    /*
 	    if(verbose) {
 	      printf("Write single register.\n");
 	      printf("RTU is %d\n",RTU);
@@ -539,7 +560,7 @@ int main(int argc, char *argv[]) {
 	    rc=modbus_send_raw_request( ctx_serial,raw_query,6);
 	    modbus_receive_confirmation(ctx_serial, raw_reply);
 	    rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-	    
+	    */
 	  } else if( (0x03 == query[header_length]) || (0x04 == query[header_length])) {
 	    int len;
 	    
