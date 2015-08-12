@@ -532,10 +532,13 @@ int main(int argc, char *argv[]) {
       } else {
 	if(serialRTUenabled)  {
 	  
+      modbus_set_slave( ctx_serial,RTU);
+      if( -1 == modbus_connect( ctx_serial)) {
+	    fprintf(stderr, "Connection failed: %s\n",modbus_strerror(errno));
+	  }
 	  switch( query[header_length] ) {
 	    case 0x06:
 	      printf("Write Single Register %d\n",RTU);
-	      modbus_set_slave( ctx_serial,RTU);
 	      memcpy(raw_query,&query[header_length-1], 6);
 	      rc=modbus_send_raw_request( ctx_serial,raw_query,6);
 	      modbus_receive_confirmation(ctx_serial, raw_reply);
@@ -547,7 +550,25 @@ int main(int argc, char *argv[]) {
 	      printf("Read Registers %d\n",RTU);
 	      break;
 	    case 0x10:
-	      printf("Write multiple registers %d\n",RTU);
+          {
+            int len=0;
+            modbus_set_debug(ctx_serial, TRUE);
+
+	        printf("Write multiple registers %d\n",RTU);
+            len=query[header_length - 2];
+            printf("Length %d\n",len);
+	        memcpy(raw_query,&query[header_length-1], len);
+
+	        rc=modbus_send_raw_request( ctx_serial,raw_query,len);
+            if( -1 == rc) {
+                printf("modbus_send_raw_request: %s\n",modbus_strerror(errno));
+            } else {
+	        modbus_receive_confirmation(ctx_serial, raw_reply);
+	        rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+           printf("rc =  %d\n",rc);
+            modbus_set_debug(ctx_serial, FALSE);
+            }
+          } 
 	      break;
 	  }
 	  
