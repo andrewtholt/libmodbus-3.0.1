@@ -80,7 +80,7 @@ int createIni(char *name ) {
   fprintf(fd,"# debug_03 = yes ; Debug 0x03 Read Holding Registers\n");
   fprintf(fd,"# debug_04 = yes ; Debug 0x04 Read Input Registers\n");
   fprintf(fd,"# debug_06 = yes ; Debug 0x06 Write Single Register\n");
- fprintf(fd,"# \n");
+  fprintf(fd,"# \n");
   
   fprintf(fd,"\n");
   fprintf(fd,"\n");
@@ -175,9 +175,6 @@ int main(int argc, char *argv[]) {
     "/usr/local/etc/newServer.ini",
     "./newServer.ini"
   };
-  
-//  tty=strsave("/dev/tty.usbserial-A600drA9");    // default for my mac
-  //  ip=strsave("127.0.0.1");    // default is localhost
   
   while ((ch = getopt(argc,argv,"b:c:h?i:p:P:t:v")) != -1) {
     switch (ch) {
@@ -314,8 +311,10 @@ int main(int argc, char *argv[]) {
       //
     } else {
       printf("Serial port %s does NOT exist\n",tty);
+      printf("Disabling serial RTU.\n");
       free( tty );
       tty = (char *)NULL;
+      serialRTUenabled=0;
     }
   }
   
@@ -532,8 +531,8 @@ int main(int argc, char *argv[]) {
       } else {
 	if(serialRTUenabled)  {
 	  
-      modbus_set_slave( ctx_serial,RTU);
-      if( -1 == modbus_connect( ctx_serial)) {
+	  modbus_set_slave( ctx_serial,RTU);
+	  if( -1 == modbus_connect( ctx_serial)) {
 	    fprintf(stderr, "Connection failed: %s\n",modbus_strerror(errno));
 	  }
 	  switch( query[header_length] ) {
@@ -543,48 +542,36 @@ int main(int argc, char *argv[]) {
 	      rc=modbus_send_raw_request( ctx_serial,raw_query,6);
 	      modbus_receive_confirmation(ctx_serial, raw_reply);
 	      rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-	    
+	      
 	      break;
 	    case 0x03:
 	    case 0x04:
 	      printf("Read Registers %d\n",RTU);
 	      break;
 	    case 0x10:
-          {
-            int len=0;
-            modbus_set_debug(ctx_serial, TRUE);
-
-	        printf("Write multiple registers %d\n",RTU);
-            len=query[header_length - 2];
-            printf("Length %d\n",len);
-	        memcpy(raw_query,&query[header_length-1], len);
-
-	        rc=modbus_send_raw_request( ctx_serial,raw_query,len);
-            if( -1 == rc) {
-                printf("modbus_send_raw_request: %s\n",modbus_strerror(errno));
-            } else {
-	        modbus_receive_confirmation(ctx_serial, raw_reply);
-	        rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-           printf("rc =  %d\n",rc);
-            modbus_set_debug(ctx_serial, FALSE);
-            }
-          } 
-	      break;
+	    {
+	      int len=0;
+//	      modbus_set_debug(ctx_serial, TRUE);
+	      
+	      printf("Write multiple registers %d\n",RTU);
+	      len=query[header_length - 2];
+	      printf("Length %d\n",len);
+	      memcpy(raw_query,&query[header_length-1], len);
+	      
+	      rc=modbus_send_raw_request( ctx_serial,raw_query,len);
+	      if( -1 == rc) {
+		printf("modbus_send_raw_request: %s\n",modbus_strerror(errno));
+	      } else {
+		modbus_receive_confirmation(ctx_serial, raw_reply);
+		rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+		printf("rc =  %d\n",rc);
+//		modbus_set_debug(ctx_serial, FALSE);
+	      }
+	    } 
+	    break;
 	  }
 	  
-	  if( 0x06 == query[header_length] ) {
-	    /*
-	    if(verbose) {
-	      printf("Write single register.\n");
-	      printf("RTU is %d\n",RTU);
-	    }
-	    modbus_set_slave( ctx_serial,RTU);
-	    memcpy(raw_query,&query[header_length-1], 6);
-	    rc=modbus_send_raw_request( ctx_serial,raw_query,6);
-	    modbus_receive_confirmation(ctx_serial, raw_reply);
-	    rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-	    */
-	  } else if( (0x03 == query[header_length]) || (0x04 == query[header_length])) {
+	  if( (0x03 == query[header_length]) || (0x04 == query[header_length])) {
 	    int len;
 	    
 	    if(verbose) {
@@ -674,7 +661,7 @@ int main(int argc, char *argv[]) {
 	    // Then overwrite the outbound data.
 	    //
 	    len=raw_reply[2] + 3;
-            rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
+	    rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
 	    //    printf("Len=%d\n",len);
 	    
 	    //    memcpy(  mb_mapping->tab_input_registers, &raw_reply[3], raw_reply[2]);
