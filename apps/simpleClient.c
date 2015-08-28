@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	int             rc;
 
     addr=0;
-    nb=2;
+    nb=4;
     
 //	ctx = modbus_new_tcp("192.168.0.143", 1502);
 //	ctx = modbus_new_tcp("127.0.0.1", 1502);
