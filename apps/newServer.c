@@ -619,7 +619,6 @@ int main(int argc, char *argv[]) {
 	      case 0x03:
 		printf("Read Holding Registers.\n");
 		tmp=(unsigned char *)mb_mapping->tab_registers;
-		// rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
 		break;
 	      case 0x04:
 		printf("Read Input Registers.\n");
@@ -632,11 +631,6 @@ int main(int argc, char *argv[]) {
 	    tmp_address = (io_address*2);
 	    
 	    for(i=0;i<raw_reply[2];i=i+2 ) {
-	      /*
-	       *     printf("i=%d\n",i);
-	       *     printf("\t%d:i=%d data=%02x\n",i,i+4,raw_reply[i+4]);
-	       *     printf("\t%d:i=%d data=%02x\n",i+1,i+3,raw_reply[i+3]);
-	       */
 	      tmp[tmp_address+i]=raw_reply[i+4];
 	      tmp[tmp_address+i+1]=raw_reply[i+3];
 	    }
@@ -662,7 +656,6 @@ int main(int argc, char *argv[]) {
 	    //
 	    len=raw_reply[2] + 3;
 	    rc = modbus_reply(ctx_tcp, query, rc, mb_mapping);
-	    //    printf("Len=%d\n",len);
 	    
 	    //    memcpy(  mb_mapping->tab_input_registers, &raw_reply[3], raw_reply[2]);
 	    
