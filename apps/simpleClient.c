@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
     
 	rc = modbus_read_registers(ctx, addr, nb,(uint16_t *) &registers);
 
-	if (rc != 1) {
+	if (rc != nb) {
 		printf("Failed\n");
         printf("%s\n", modbus_strerror(errno));
 	}
