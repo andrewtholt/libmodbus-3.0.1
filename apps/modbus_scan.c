@@ -219,7 +219,8 @@ int main(int argc, char *argv[]) {
             printf("RTU=%3d\tretries=%2d\r",rtu,retry_count);
             fflush(stdout);
             
-            rc = modbus_read_input_registers(ctx, 00, nb_points, tab_rp_registers);
+//            rc = modbus_read_input_registers(ctx, 00, nb_points, tab_rp_registers);
+            rc = modbus_read_registers(ctx, 00, nb_points, tab_rp_registers);
             //                printf("modbus_read_registers: %d\n",rc);
             
             if (rc > 0) {

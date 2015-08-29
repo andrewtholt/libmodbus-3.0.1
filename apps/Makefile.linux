@@ -1,7 +1,8 @@
 #!/bin/sh
 
 OBJS=modbus_collect.o modbus_scan.o
-BINS=newServer modbus_collect modbus_scan simpleServer localServer simpleClient libhelper.so
+BINS=writeHoldingReg readHoldingReg newServer modbus_collect modbus_scan simpleServer localServer simpleClient libhelper.so
+
 CFLAGS=-g
 
 INC = /usr/local/include/modbus
@@ -20,6 +21,12 @@ modbus_scan:	modbus_scan.o
 
 modbus_scan.o:	modbus_scan.c
 	$(CC) $(CFLAGS) -I$(INC) -c -o modbus_scan.o modbus_scan.c
+
+writeHoldingReg:	writeHoldingReg.c
+	$(CC) $(CFLAGS) -I$(INC) -o writeHoldingReg writeHoldingReg.c $(LIBS) 
+
+readHoldingReg:	readHoldingReg.c
+	$(CC) $(CFLAGS) -I$(INC) -o readHoldingReg readHoldingReg.c $(LIBS) 
 
 simpleClient:	simpleClient.c
 	$(CC) $(CFLAGS) -I$(INC) -o simpleClient simpleClient.c $(LIBS) 

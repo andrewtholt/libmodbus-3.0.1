@@ -4,8 +4,7 @@
 #include <stdio.h>
 
 #ifdef LINUX
-union semun
-{
+union semun {
   int val;			/* value for SETVAL */
   struct semid_ds *buf;		/* buffer for IPC_STAT, IPC_SET */
   unsigned short *array;	/* array for GETALL, SETALL */
@@ -14,9 +13,7 @@ union semun
 };
 #endif
 
-int
-semcall (int sid, int op)
-{
+int semcall (int sid, int op) {
 //    printf("\nHere\n");
   int rc = 0;
   struct sembuf sb;
