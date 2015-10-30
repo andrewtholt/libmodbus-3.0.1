@@ -2,3 +2,6 @@
 Modify simple client to read an ini file and/or options from
 command line..
 
+Add bitwise input and coil outputs.
+
+
