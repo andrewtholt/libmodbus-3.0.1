@@ -429,8 +429,6 @@ int main(int argc, char *argv[]) {
     while ( !exitFlag ) {
         header_length = modbus_get_header_length(ctx_tcp);
 
-        //        printf("Header length=%d\n", header_length);
-
         if(verbose) {
             modbus_set_debug(ctx_tcp, TRUE);
             //            modbus_set_debug(ctx_serial, TRUE);
@@ -477,9 +475,6 @@ int main(int argc, char *argv[]) {
 
             printf("IO Address=%04x\n",io_address);
 
-            /*
-             * Fix this, use RTU address from ini file.
-             */
             if (verbose) {
                 if( localRTU == RTU ) {
                     printf("It's for me !\n");
