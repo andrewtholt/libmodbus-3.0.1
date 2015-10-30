@@ -2,5 +2,6 @@
 Modify simple client to read an ini file and/or options from
 command line..
 
-Remove all SYSVIPC memeory and semaphores and replace with the more portableposix equivalents.
+Add bitwise input and coil outputs.
+
 

@@ -69,7 +69,7 @@ int createIni(char *name ) {
 
     fprintf(fd,"[modbus]\n");
     fprintf(fd,"\tdebug = no ; Display ModBus packets ?\n");
-    fprintf(fd,"\tlocal_rtu = 255 ; My ModBud address\n");
+    fprintf(fd,"\tlocal_rtu = 255 ; My ModBus address\n");
     fprintf(fd,"\tRTU = no ; Serial RTU gateway enabled ?\n");
     fprintf(fd,"\ttty = /dev/ttyUSB0 ; Serial port\n");
     fprintf(fd,"\tbaud_rate = 9600 ; serial speed\n");
@@ -94,17 +94,17 @@ int createIni(char *name ) {
 
 
 void usage() {
-    printf("\nUsage: simpleServer\n");
-    printf("\t-b <rate>\tSet RTU baud rate.\n");
-    printf("\t-c <file>\tUse specified config file.\n");
-    printf("\t-h|-?\t\tHelp.\n");
-    printf("\t-i <IP Addr>\tIP Address to listen on.\n");
-    printf("\t-p <port num>\tNetwork port.\n");
-    printf("\t-P E|O|N\tSerial port parity.\n");
-    printf("\t-t <port>\tSerial port to use for ModBus RTUs\n");
-
-
-    printf("\n");
+  printf("\nUsage: simpleServer\n");
+  printf("\t-b <rate>\tSet RTU baud rate.\n");
+  printf("\t-c <file>\tUse specified config file.\n");
+  printf("\t-h|-?\t\tHelp.\n");
+  printf("\t-i <IP Addr>\tIP Address to listen on.\n");
+  printf("\t-p <port num>\tNetwork port.\n");
+  printf("\t-P E|O|N\tSerial port parity.\n");
+  printf("\t-t <port>\tSerial port to use for ModBus RTUs\n");
+  
+  
+  printf("\n");
 }
 
 int main(int argc, char *argv[]) {
@@ -255,7 +255,7 @@ int main(int argc, char *argv[]) {
     }
 
     ini = iniparser_load( iniFile );
-    ptr = iniparser_getstring(ini,"network:IP","127.0.0.1");
+    ptr= iniparser_getstring(ini,"network:IP","127.0.0.1");
 
     if((char *)NULL == ip) {
         ip=strsave(ptr);
@@ -429,8 +429,6 @@ int main(int argc, char *argv[]) {
     while ( !exitFlag ) {
         header_length = modbus_get_header_length(ctx_tcp);
 
-        //        printf("Header length=%d\n", header_length);
-
         if(verbose) {
             modbus_set_debug(ctx_tcp, TRUE);
             //            modbus_set_debug(ctx_serial, TRUE);
@@ -478,7 +476,7 @@ int main(int argc, char *argv[]) {
             printf("IO Address=%04x\n",io_address);
 
             if (verbose) {
-                if( 0xff == RTU ) {
+                if( localRTU == RTU ) {
                     printf("It's for me !\n");
                 } else {
                     printf("RTU Id: %02d\n",RTU);
@@ -488,7 +486,7 @@ int main(int argc, char *argv[]) {
                 printf("Seq Number=0x%04x\n", query[1]);
             }   
 
-            if( 0xff == RTU ) {
+            if( localRTU == RTU ) {
                 //
                 // Local mapping
                 //
