@@ -15,12 +15,12 @@ int main(int argc, char *argv[]) {
 	int             rc;
 
     addr=0;
-    nb=1;
+    nb=4;
     
 //	ctx = modbus_new_tcp("192.168.0.143", 1502);
 //	ctx = modbus_new_tcp("127.0.0.1", 1502);
 //	ctx = modbus_new_tcp("10.0.0.101", 502);
-	ctx = modbus_new_tcp("192.168.100.72", 502);
+	ctx = modbus_new_tcp("192.168.100.72", 1502);
 
 	if (ctx == NULL) {
 		fprintf(stderr, "modbus_new_tcp failed.\n");
@@ -39,13 +39,14 @@ int main(int argc, char *argv[]) {
     
 	rc = modbus_read_registers(ctx, addr, nb,(uint16_t *) &registers);
 
-	if (rc != 1) {
-		printf("Failed\n");
-        printf("%s\n", modbus_strerror(errno));
+	if (rc != nb) {
+		printf("Failed:%d\n",rc);
+        printf("==>%s\n", modbus_strerror(errno));
 	}
     
     printf("\nData = 0x%04x\n", registers & 0xffff);
 
+    sleep(1);
     modbus_close(ctx);
     modbus_free(ctx);
 

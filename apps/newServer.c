@@ -94,17 +94,17 @@ int createIni(char *name ) {
 
 
 void usage() {
-    printf("\nUsage: simpleServer\n");
-    printf("\t-b <rate>\tSet RTU baud rate.\n");
-    printf("\t-c <file>\tConfig file.\n");
-    printf("\t-h|-?\t\tHelp.\n");
-    printf("\t-i <IP Addr>\tIP Address to listen on.\n");
-    printf("\t-p <port num>\tNetwork port.\n");
-    printf("\t-P E|O|N\tSerial port parity.\n");
-    printf("\t-t <port>\tSerial port to use for ModBus RTUs\n");
-
-
-    printf("\n");
+  printf("\nUsage: simpleServer\n");
+  printf("\t-b <rate>\tSet RTU baud rate.\n");
+  printf("\t-c <file>\tUse specified config file.\n");
+  printf("\t-h|-?\t\tHelp.\n");
+  printf("\t-i <IP Addr>\tIP Address to listen on.\n");
+  printf("\t-p <port num>\tNetwork port.\n");
+  printf("\t-P E|O|N\tSerial port parity.\n");
+  printf("\t-t <port>\tSerial port to use for ModBus RTUs\n");
+  
+  
+  printf("\n");
 }
 
 int main(int argc, char *argv[]) {
