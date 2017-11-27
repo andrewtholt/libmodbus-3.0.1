@@ -26,21 +26,21 @@ create table config (   idx INTEGER PRIMARY KEY,
     length integer default 8 check ( length = 7 or length = 8)
 );
 
-create table data ( idx INTEGER PRIMARY KEY,
-    modbus_type varchar default "RTU" check ( modbus_type = "RTU" or modbus_type = "TCP" ),
-    ip_address varchar default "127.0.0.1",
-    ip_port int default 1502,
-
-    RTU integer check(RTU > 0 and RTU < 255),
-    phaseA integer default 0,
-    phaseB integer default 0,
-    phaseC integer default 0,
-    
-    phaseAKWH integer default 0,
-    phaseBKWH integer default 0,
-    phaseCKWH integer default 0,
-    timeStamp DATE default CURRENT_TIMESTAMP 
-);
+-- create table data ( idx INTEGER PRIMARY KEY,
+--     modbus_type varchar default "RTU" check ( modbus_type = "RTU" or modbus_type = "TCP" ),
+--     ip_address varchar default "127.0.0.1",
+--     ip_port int default 1502,
+-- 
+--     RTU integer check(RTU > 0 and RTU < 255),
+--     phaseA integer default 0,
+--     phaseB integer default 0,
+--     phaseC integer default 0,
+--     
+--     phaseAKWH integer default 0,
+--     phaseBKWH integer default 0,
+--     phaseCKWH integer default 0,
+--     timeStamp DATE default CURRENT_TIMESTAMP 
+-- );
 
 create table tag ( idx INTEGER PRIMARY KEY,
     --
@@ -111,14 +111,15 @@ create table history ( idx INTEGER primary KEY,
 --
 insert into config ( retention_period ) values ( 30 );
 
-insert into data (RTU) values ( 1 );
-insert into data (RTU) values ( 2 );
+-- insert into data (RTU) values ( 1 );
+-- insert into data (RTU) values ( 2 );
 
-insert into tag ( name,address,registers) values ("CurrentA",0,1);
-insert into tag ( name,address,registers) values ("CurrentB",1,1);
+insert into tag ( name, topic, address, registers) values ("PorchLight","/home/Outside/PorchLight/Power", 0,1);
+insert into tag ( name, topic, address, registers) values ("BackFloodlight","/home/outside/BackFloodlight/cmnd/power",1,1);
 insert into tag ( name,address,registers) values ("CurrentC",2,1);
 
-insert into rtu_data (RTU,tag,scan_time) values (1,"CurrentA",10);
-insert into rtu_data (RTU,tag,scan_time) values (1,"CurrentB",10);
+insert into rtu_data (RTU,tag,scan_time) values (1,"PorchLight",10);
+insert into rtu_data (RTU,tag,scan_time) values (1,"BackFloodlight",10);
 insert into rtu_data (RTU,tag,scan_time) values (1,"CurrentC",10);
+
 
