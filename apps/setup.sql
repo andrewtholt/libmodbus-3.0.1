@@ -47,6 +47,10 @@ create table tag ( idx INTEGER PRIMARY KEY,
     -- Tag name
     --
     name varchar,
+    -- 
+    -- MQTT Topic.  May be empty
+    --
+    topic varchar,
     --
     -- Modbus function number
     --
