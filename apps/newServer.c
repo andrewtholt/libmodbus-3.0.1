@@ -498,9 +498,15 @@ int main(int argc, char *argv[]) {
                 // for an invalid function.
 
                 switch (query[header_length]) {
+                    case 0x01:  // read coils
+                        break;
+                    case 0x02:  // read discrete inputs.
+                        break;
                     case 0x03:  // read holding registers
                     case 0x04:  // read input registers
                         rc = modbus_reply(ctx_tcp, query, rc, local_mb_mapping);
+                        break;
+                    case 0x05:  // write single coil
                         break;
                     case 0x06: //write single register
                         swab(&query[8],&len,2);
