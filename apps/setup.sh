@@ -11,23 +11,23 @@ echo "Running on $OS"
 
 echo "Check for gnuplot ..."
 
-if [ $WIN -ne 0 ]; then
-    if [ -x "c:/gnuplot/binary/gnuplot.exe" ]; then
-        echo "... found."
-    else
-        echo "... NOT found, plase install gnuplot."
-        echo "... See README"
-        exit 1
-    fi
-else
-    FLAG=`which gnuplot | wc -l`
-    if [ $FLAG -ne 0 ]; then
-        echo "... found."
-    else
-        echo "... NOT found, plase install gnuplot, or fix PATH."
-        exit 1
-    fi
-fi
+# if [ $WIN -ne 0 ]; then
+#     if [ -x "c:/gnuplot/binary/gnuplot.exe" ]; then
+#         echo "... found."
+#     else
+#         echo "... NOT found, plase install gnuplot."
+#         echo "... See README"
+#         exit 1
+#     fi
+# else
+#     FLAG=`which gnuplot | wc -l`
+#     if [ $FLAG -ne 0 ]; then
+#         echo "... found."
+#     else
+#         echo "... NOT found, plase install gnuplot, or fix PATH."
+#         exit 1
+#     fi
+# fi
 
 echo "Checking that default database locations exists ..."
 
