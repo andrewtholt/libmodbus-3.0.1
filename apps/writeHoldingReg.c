@@ -6,6 +6,18 @@
 #include <modbus.h>
 #include <stdint.h>
 
+void usage(char *me) {
+    printf("Usage: %s -c -d -v -h -p <nnn> -i <host> -r <reg addr> -n <reg count>\n\n", me);
+    printf("\t-c\t\tRegister contents.\n");
+    printf("\t-d\t\tDebug.\n");
+    printf("\t-v\t\tVerbose.\n");
+    printf("\t-h|?\t\tHelp\n");
+    printf("\t-p <nnnn>\tServer Port.\t\n");
+    printf("\t-i <id>\t\tServer name/address.\n");
+    printf("\t-r <addr>\tRegister Address.\n");
+    printf("\t-n <count>\tRegister Count..\n");
+}
+
 int main(int argc, char *argv[]) {
     extern int errno;
 	modbus_t       *ctx;
@@ -25,11 +37,6 @@ int main(int argc, char *argv[]) {
 
     strcpy(name,"127.0.0.1");
     
-//	ctx = modbus_new_tcp("192.168.0.143", 1502);
-//	ctx = modbus_new_tcp("127.0.0.1", 1502);
-//	ctx = modbus_new_tcp("10.0.0.101", 502);
-//	ctx = modbus_new_tcp("192.168.100.72", 1502);
-
     while((ch = getopt(argc,argv,"dvh?p:i:r:n:c:")) != -1) {
         switch(ch) {
             case 'c':
@@ -43,7 +50,7 @@ int main(int argc, char *argv[]) {
                 break;
             case 'h':
             case '?':
-                printf("Usage\n");
+                usage(argv[0]);
                 exit(1);
                 break;
             case 'p':
